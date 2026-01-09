@@ -125,6 +125,7 @@ exports.listGroups = async (req, res) => {
     return res.status(200).json({
       message: "groups retrieved successfully!",
       groups: groupList,
+      spaceName: spaceFound.name,
       status: 1,
     });
   } catch (error) {
