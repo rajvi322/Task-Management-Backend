@@ -6,7 +6,7 @@ const router = express.Router();
 router.post("/add-task", verifyToken, TaskController.createTask);
 router.post("/get-tasks", verifyToken, TaskController.getAllTaskBySpace);
 router.patch(
-  "/change-task-status",
+  "/change-task-status/:taskId",
   verifyToken,
   TaskController.changeTaskGroup
 );

@@ -54,9 +54,9 @@ exports.deleteGroup = async (req, res) => {
 
     await Group.deleteOne({ _id: groupId });
 
-    return res.status(404).json({
-      message: "Group deleted successfuly",
-      status: 0,
+    return res.status(200).json({
+      message: "Group deleted successfully",
+      status: 1,
     });
   } catch (e) {
     return res.status(500).json({
